@@ -21,10 +21,11 @@ menu:
   归档: /archives/ || fas fa-archive
   标签: /tags/ || fas fa-tags
   分类: /categories/ || fas fa-folder-open
-  列表||fa fa-heartbeat:
+  列表||fa fa-list || hide:
     音乐: /music/ || fas fa-music
     照片: /picture/ || fas fa-images
     电影: /movies/ || fas fa-video
+  留言板: /comments/ || fas fa-envelope-open
   友链: /link/ || fas fa-link
   关于: /about/ || fas fa-heart
 
@@ -80,7 +81,7 @@ disable_top_img: false
 default_top_img: rgba(0, 0, 0, 0)
 
 # The banner image of index page
-index_img: /img/background.jpg
+index_img:
 
 # The banner image of archive page
 archive_img:
@@ -102,7 +103,7 @@ category_img:
 category_per_img:
 
 # The background image of footer
-footer_img: /img/footer.jpg
+footer_img: false
 
 # Website Background
 # Can set it to color or image url
@@ -265,8 +266,9 @@ footer:
   owner:
     enable: true
     since: 2024
-  custom_text:
-  # Copyright of theme and framework
+  custom_text: |
+    <span style='color:#FFD700; font-weight:bold;'>在无垠的宇宙中，旅行者1号仍在沉默地前行，它越过光年，穿梭在深邃而寂静的星海之中 ✨。</span><br>
+    <span style='color:#87CEEB; font-weight:bold;'>而某个未知的轨道上，也许正有一束微光，在亿万年的时空里飘荡，寻找与它共鸣的星辰 💫。</span>
   copyright: false
 
 # --------------------------------------
@@ -389,7 +391,7 @@ darkmode:
   # autoChangeMode: 1  Following System Settings, if the system doesn't support dark mode, it will switch dark mode between 6 pm to 6 am
   # autoChangeMode: 2  Switch dark mode between 6 pm to 6 am
   # autoChangeMode: false
-  autoChangeMode: false
+  autoChangeMode: 2
   # Set the light mode time. The value is between 0 and 24. If not set, the default value is 6 and 18
   start:
   end:
@@ -473,20 +475,21 @@ math:
 search:
   # Choose: algolia_search / local_search / docsearch
   # leave it empty if you don't need search
-  use:
-  placeholder:
+  use: local_search
+  placeholder: "Search for Posts"
 
   # Algolia Search
   algolia_search:
     # Number of search results per page
+    enable: false
     hitsPerPage: 6
 
   # Local search
   local_search:
-  enable: true
-  labels:
-    input_placeholder: Search for Posts
-    hits_empty: "We didn't find any results for the search: ${query}"
+    enable: true
+    labels:
+      input_placeholder: "Search for Posts"
+      hits_empty: "We didn't find any results for the search: ${query}"
 
   # Docsearch
   # https://docsearch.algolia.com/
@@ -803,12 +806,8 @@ beautify:
 font:
   global-font-size: "15px"
   code-font-size: "14px"
-  # -apple-system, BlinkMacSystemFont, "Segoe UI" , "Helvetica Neue" , Lato, Roboto, "PingFang SC" , "Microsoft JhengHei" , "Microsoft YaHei" , sans-serif
-  # Wenkai, consolas, -apple-system, 'Quicksand', 'Nimbus Roman No9 L', 'PingFang SC', 'Hiragino Sans GB', 'Noto Serif SC', 'Microsoft Yahei', 'WenQuanYi Micro Hei', 'ST Heiti', sans-serif;
-  font-family: var(--global-font), Consolas_1, -apple-system, 'Quicksand', 'Nimbus Roman No9 L', 'PingFang SC', 'Hiragino Sans GB', 'Noto Serif SC', 'Microsoft Yahei', 'WenQuanYi Micro Hei', 'ST Heiti', sans-serif;
-  # consolas, ZhuZiAWan_light, "Microsoft YaHei", Menlo, "PingFang SC", "Microsoft JhengHei", sans-serif
-  # Consolas_1, ZhuZiAWan_light, "Microsoft YaHei", Menlo, "PingFang SC", "Microsoft JhengHei", sans-serif
-  code-font-family: Consolas_1, var(--global-font), "Microsoft YaHei", Menlo, "PingFang SC", "Microsoft JhengHei", sans-serif
+  font-family: YSHST, -apple-system, 'Quicksand', 'Nimbus Roman No9 L', 'PingFang SC', 'Hiragino Sans GB', 'Noto Serif SC', 'Microsoft Yahei', 'WenQuanYi Micro Hei', 'ST Heiti', sans-serif;
+  code-font-family: Consolas, YSHST, "Microsoft YaHei", Menlo, "PingFang SC", "Microsoft JhengHei", sans-serif
 
 # Font settings for the site title and site subtitle
 # https://fonts.googleapis.com/css?family=Titillium+Web&display=swap
@@ -816,7 +815,7 @@ font:
 # 左上角網站名字 主頁居中網站名字
 blog_title_font:
   font_link:
-  font-family: var(--global-font)
+  font-family: YSHST
 
 # The setting of divider icon
 hr_icon:
@@ -1036,9 +1035,10 @@ css_prefix: true
 # Insert the code to head (before '</head>' tag) and the bottom (before '</body>' tag)
 inject:
   head:
-    # - <link rel="stylesheet" href="/xxx.css">
+    - <link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'">
   bottom:
-    # - <script src="xxxx"></script>
+    - <canvas id="universe"></canvas>
+    - <script defer src="/js/universe.js"></script>
 
 # CDN Settings
 # Don't modify the following settings unless you know how they work
@@ -1113,3 +1113,25 @@ CDN:
     # valine:
     # waline_css:
     # waline_js:
+
+# electric_clock (安知鱼电子钟)
+# see https://anzhiy.cn/posts/fc18.html
+electric_clock:
+  enable: false # 开关
+  priority: 5 #过滤器优先权
+  enable_page: / # 应用页面
+  exclude:
+    # - /posts/
+    # - /about/
+  layout: # 挂载容器类型
+    type: class
+    name: sticky_layout
+    index: 0
+  loading: https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/loading.gif #加载动画自定义
+  clock_css: https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.css
+  clock_js: https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.js
+  ip_api: https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0
+  qweather_key: # 和风天气key
+  gaud_map_key: # 高得地图web服务key
+  default_rectangle: false # 开启后将一直显示rectangle位置的天气，否则将获取访问者的地理位置与天气
+  rectangle: 113.34532,23.15624 # 获取访问者位置失败时会显示该位置的天气，同时该位置为开启default_rectangle后的位置

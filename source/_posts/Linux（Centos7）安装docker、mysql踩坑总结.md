@@ -5,6 +5,7 @@ tags: [docker, linux]
 categories: 学习笔记
 description: 记录了在 CentOS 7 上安装 Docker 和 MySQL 时遇到的问题及解决方案，帮助你更顺利地搭建环境，避免常见的坑。
 cover: /img/Linux（Centos7）安装docker、mysql踩坑总结.png
+swiper_index: 4
 ---
 
 > 本文主要是记录了在 CentOS 7 上安装 Docker 和 MySQL 时遇到的一些问题，主要是由于镜像源未配置正确，导致无法顺利下载所需的依赖包。下面将介绍在安装过程中遇到的困难，并分享如何通过配置合适的镜像源来解决这些问题，从而顺利完成 Docker 和 MySQL 的安装，希望能够帮到有需要的人。

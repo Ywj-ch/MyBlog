@@ -5,6 +5,7 @@ tags: [python, fiddler]
 categories: 个人项目
 description: 本文详细介绍了基于若依框架构建 SpringBoot 管理系统的学习过程，涵盖了框架的基本配置、功能实现及常见问题解决，帮助开发者快速上手和掌握若依框架。
 cover: /img/用Python与Fiddler实现图书馆座位自动预约：实战经验分享.png
+swiper_index: 3
 ---
 
 > 前言：

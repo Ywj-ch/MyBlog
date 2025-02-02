@@ -5,6 +5,7 @@ tags: [springboot]
 categories: 学习笔记
 description: 本文详细介绍了基于若依框架构建 SpringBoot 管理系统的学习过程，涵盖了框架的基本配置、功能实现及常见问题解决，帮助开发者快速上手和掌握若依框架。
 cover: /img/基于若依框架的SpringBoot管理系统学习.png
+swiper_index: 2
 ---
 
 #### 前言
