@@ -127,7 +127,7 @@ live2d:
   tagMode: false # 标签模式, 是否仅替换 live2d tag标签而非插入到所有页面中
   debug: false # 调试, 是否在控制台输出日志
   model:
-    use: live2d-widget-model-koharu # npm-module package name
+    use: live2d-widget-model-koharu # npm-module package name 小喵
     # use: wanko # 博客根目录/live2d_models/ 下的目录名
     # use: ./wives/wanko # 相对于博客根目录的路径
     # use: https://npm.elemecdn.com/live2d-widget-model-wanko@1.0.5/assets/wanko.model.json # 你的自定义 url
@@ -226,3 +226,14 @@ wowjs:
   animate_css: https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/animate.min.css
   wow_js: https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow.min.js
   wow_init_js: https://npm.elemecdn.com/hexo-butterfly-wowjs/lib/wow_init.js
+
+# Security
+encrypt: # hexo-blog-encrypt
+  abstract: 有东西被加密了, 请输入密码查看.
+  message: 您好, 这里需要密码.
+  tags:
+    - { name: tagName, password: 密码A }
+    - { name: tagName, password: 密码B }
+  theme: xray
+  wrong_pass_message: 抱歉, 这个密码看着不太对, 请再试试.
+  wrong_hash_message: 抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容.
