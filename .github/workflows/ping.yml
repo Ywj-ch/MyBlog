@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Ping blog
-        run: curl -s -o /dev/null -w "%{http_code}" https://chippanda.top/
+        run: curl -s -o /dev/null -w "%{http_code}" https://www.chippanda.top/
 
       - name: Ping Twikoo
-        run: curl -s -o /dev/null -w "%{http_code}" https://ywj-twikoo.vercel.app/
+        run: curl -s -o /dev/null -w "%{http_code}" https://twikoo-pied-iota.vercel.app/
