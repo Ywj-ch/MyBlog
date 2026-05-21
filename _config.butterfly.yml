@@ -621,7 +621,7 @@ facebook_comments:
 # Twikoo
 # https://github.com/imaegoo/twikoo
 twikoo:
-  envId: https://ywj-twikoo.vercel.app
+  envId: https://twikoo-pied-iota.vercel.app
   region:
   # Use Twikoo visitor count as the page view count
   visitor: true
