@@ -303,7 +303,7 @@ aside:
       link: https://github.com/Ywj-ch
   card_announcement:
     enable: true
-    content: 欢迎来到我的博客！
+    content: 有时间的话就是四处看看吧
   card_recent_post:
     enable: true
     # If set 0 will show all

@@ -1,5 +1,5 @@
 ---
-title: 算法笔记：DFS 模板的变通——从路径检查到环检测
+title: DFS变通 —— 路径检查到环检测
 date: 2026-04-27 10:00:00
 tags: [DFS, BFS, 图论]
 categories: 算法学习

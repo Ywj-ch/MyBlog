@@ -1,5 +1,5 @@
 ---
-title: LeetCode1807.矩阵的最大非负积【中等】
+title: 图上DP —— 矩阵最大非负积
 date: 2026-03-23 10:00:00
 tags: [动态规划, 状态机思维]
 categories: 算法学习

@@ -1,5 +1,5 @@
 ---
-title: 基于Dijkstra算法引生出来的一道算法题
+title: Dijkstra变体 —— 带约束最短路径
 date: 2026-05-05 15:10:56
 tags: [Dijkstra, 图论]
 categories: 算法学习
