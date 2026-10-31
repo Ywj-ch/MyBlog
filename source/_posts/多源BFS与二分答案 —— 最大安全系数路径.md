@@ -3,7 +3,7 @@ title: 多源BFS与二分答案 —— 最大安全系数路径
 date: 2026-07-01 10:00:00
 tags: [多源BFS, 二分答案, 连通性]
 categories: 算法学习
-cover: /img/leetcode.jpg
+cover: /img/leetcode.webp
 ---
 
 # 多源BFS + 二分答案 —— 最大安全系数路径

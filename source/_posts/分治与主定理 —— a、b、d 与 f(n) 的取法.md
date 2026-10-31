@@ -3,7 +3,7 @@ title: 分治与主定理 —— a、b、d 与 f(n) 的取法
 date: 2026-09-16 10:00:00
 tags: [分治, 主定理, 递归, 排序]
 categories: 算法学习
-cover: /img/leetcode.jpg
+cover: /img/leetcode.webp
 ---
 
 # 分治与主定理 —— a、b、d 与 f(n) 的取法

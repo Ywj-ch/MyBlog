@@ -20,3 +20,4 @@ _multiconfig.yml
 __pycache__/
 *_backup_*/
 tools/__pycache__/
+.backup-images/

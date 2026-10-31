@@ -3,7 +3,7 @@ title: 回溯到DP —— 记忆化与状态压缩
 date: 2026-03-10 10:00:00
 tags: [DP, 记忆化搜索]
 categories: 算法学习
-cover: /img/leetcode.jpg
+cover: /img/leetcode.webp
 ---
 
 # 算法笔记：从回溯到 DP 的优化之路

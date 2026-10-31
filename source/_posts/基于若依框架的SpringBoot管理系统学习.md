@@ -4,7 +4,7 @@ date: 2024-10-24 15:03:12
 tags: [springboot]
 categories: 学习笔记
 description: 本文详细介绍了基于若依框架构建 SpringBoot 管理系统的学习过程，涵盖了框架的基本配置、功能实现及常见问题解决，帮助开发者快速上手和掌握若依框架。
-cover: /img/基于若依框架的SpringBoot管理系统学习.png
+cover: /img/基于若依框架的SpringBoot管理系统学习.webp
 swiper_index: 2
 ---
 
@@ -45,45 +45,45 @@ swiper_index: 2
 
 > 若依的后端项目主要分为六个模块，他们之间的依赖关系如下图所示：
 
-![pic_59f382bd.png](/images/2025/springboot-ruoyi/1.png)
+![pic_59f382bd.png](/images/2025/springboot-ruoyi/1.webp)
 
 下面我们来分析一下每个模块的具体功能
 
-![pic_e9c40141.png](/images/2025/springboot-ruoyi/2.png)
+![pic_e9c40141.png](/images/2025/springboot-ruoyi/2.webp)
 
-![pic_1c2520b9.png](/images/2025/springboot-ruoyi/3.png)
+![pic_1c2520b9.png](/images/2025/springboot-ruoyi/3.webp)
 
-![pic_1e9d8b33.png](/images/2025/springboot-ruoyi/4.png)
+![pic_1e9d8b33.png](/images/2025/springboot-ruoyi/4.webp)
 
-![pic_aa8ccf3b.png](/images/2025/springboot-ruoyi/5.png)
+![pic_aa8ccf3b.png](/images/2025/springboot-ruoyi/5.webp)
 
 > 从上面的几张图我们可以看出若依的主要框架包括 admin、common、framework 和 system，至于 quartz 和 generator 它们并不是必须的，但是有了它们，可以大大加快我们程序的开发速度，后面我们会讲到如何使用。
 
 若依的配置文件主要放在-admin 包中
 
-![pic_16f83402.png](/images/2025/springboot-ruoyi/6.png)
+![pic_16f83402.png](/images/2025/springboot-ruoyi/6.webp)
 
 接下来是项目相关的数据库表
 
-![pic_3d67c75b.png](/images/2025/springboot-ruoyi/7.png)
+![pic_3d67c75b.png](/images/2025/springboot-ruoyi/7.webp)
 
 然后让我们来看看前端的项目结构
 
 > 这张图完整了列出了前端项目的框架，但是如果你像我一样重心放在后端开发，那其实只需要了解其中一部份模块的功能就行了，下面这张图列出了后端人员经常需要用到的几个模块。
 
-![pic_39357e97.png](/images/2025/springboot-ruoyi/8.png)
+![pic_39357e97.png](/images/2025/springboot-ruoyi/8.webp)
 
 下面们来分析一下若依后端的具体代码
 
 > 首先从 Controller 开始，若依框架中的 Controller 都继承了 BaseController 类，实现了基本的数据分页展示功能、用户登录相关方法、以及请求成功或者失败后的相关处理。可以说，若依的这个 BaseController 类基本上实现了业务开发所要用到的大多数常用功能。
 
-![pic_8f67fd18.png](/images/2025/springboot-ruoyi/9.png)
+![pic_8f67fd18.png](/images/2025/springboot-ruoyi/9.webp)
 
 > 然后是我们比较关心的返回对象的封装，若依将返回对象分为了两类，一类是分页查询返回对象，另一类是增删改查返回对象。
 
-![pic_9d46515e.png](/images/2025/springboot-ruoyi/10.png)
+![pic_9d46515e.png](/images/2025/springboot-ruoyi/10.webp)
 
-![pic_b2b81c37.png](/images/2025/springboot-ruoyi/11.png)
+![pic_b2b81c37.png](/images/2025/springboot-ruoyi/11.webp)
 
 ```java
 @PreAuthorize("@ss.hasPermi('manage:partner:list')")
@@ -119,13 +119,13 @@ swiper_index: 2
 <el-button link type="primary" @click="resetPassword(scope.row)" v-hasPermi="['manage:partner:edit']">重置密码</el-button>
 ```
 
-![pic_c06ad374.png](/images/2025/springboot-ruoyi/12.png)
+![pic_c06ad374.png](/images/2025/springboot-ruoyi/12.webp)
 
 前后端交互流程：
 
-![pic_e4586998.png](/images/2025/springboot-ruoyi/13.png)
+![pic_e4586998.png](/images/2025/springboot-ruoyi/13.webp)
 
-![pic_471e64aa.png](/images/2025/springboot-ruoyi/14.png)
+![pic_471e64aa.png](/images/2025/springboot-ruoyi/14.webp)
 
 #### 二、若依框架的项目搭建
 
@@ -147,7 +147,7 @@ spring:
 
 > ruoyi 是数据库的名字，然后执行下面的 sql 脚本就行了。
 
-![pic_3c915a97.png](/images/2025/springboot-ruoyi/15.png)
+![pic_3c915a97.png](/images/2025/springboot-ruoyi/15.webp)
 
 ###### 配置 Redis 缓存
 
@@ -200,7 +200,7 @@ npm run dev
 
 > 成功启动后页面会自动跳转到如下登录界面，登录密码默认是 admin123，若依的密码使用了 MD5 加密存储，所以在数据库里面是看不到的。
 
-![pic_44fe88e3.png](/images/2025/springboot-ruoyi/16.png)
+![pic_44fe88e3.png](/images/2025/springboot-ruoyi/16.webp)
 
 ##### 4.功能详讲
 
@@ -253,7 +253,7 @@ npm run dev
 > - 表单构建  
 >   可视化创建表单，支持生成 Vue 表单页面，简化前端开发工作。
 
-![pic_0ed0d635.png](/images/2025/springboot-ruoyi/17.png)
+![pic_0ed0d635.png](/images/2025/springboot-ruoyi/17.webp)
 
 ##### 5.若依的代码生成器功能
 
@@ -273,7 +273,7 @@ npm run dev
 > - 在后台管理系统中，点击左侧菜单的“系统工具” -> “代码生成”即可进入代码生成器的管理界面。
 > - 该界面显示了所有从数据库中读取的表信息，包括表名、表描述、创建时间等
 
-###### ![pic_33165d4b.png](/images/2025/springboot-ruoyi/18.png)
+###### ![pic_33165d4b.png](/images/2025/springboot-ruoyi/18.webp)
 
 > ###### 2.2 配置生成参数
 >
@@ -284,7 +284,7 @@ npm run dev
 > - 生成模板：用于指定表的类型，分别有单表、树表和主子表。
 > - 上级菜单：分配到指定菜单下。
 
-![pic_9ae66709.png](/images/2025/springboot-ruoyi/19.png)
+![pic_9ae66709.png](/images/2025/springboot-ruoyi/19.webp)
 
 > ###### 2.3 生成代码
 >
@@ -292,7 +292,7 @@ npm run dev
 > - 生成的代码会自动打包成一个压缩文件，包含了后端和前端的代码模板，下载后可以解压并将代码复制到项目中进行个性化修改。
 > - 能够对生成的代码进行预览。
 
-![pic_8d7736e5.png](/images/2025/springboot-ruoyi/20.png)
+![pic_8d7736e5.png](/images/2025/springboot-ruoyi/20.webp)
 
 ###### 3. 生成的代码结构
 
@@ -399,25 +399,25 @@ INSERT INTO `tb_node` (`node_name`, `address`, `business_type`, `region_id`, `pa
 
 > 然后是这三张表之间的关系：可以看到区域表跟点位表是一对多的关系，合作商表与点位表也是一对多的关系，一个区域里面或者是一个合作商都可以拥有多个点位。
 
-![pic_a0178a50.png](/images/2025/springboot-ruoyi/21.png)
+![pic_a0178a50.png](/images/2025/springboot-ruoyi/21.webp)
 
 > 然后我们使用若依的代码生成器来生成区域管理相关代码
 
-![pic_95dbd639.png](/images/2025/springboot-ruoyi/22.png)
+![pic_95dbd639.png](/images/2025/springboot-ruoyi/22.webp)
 
-![pic_19566da6.png](/images/2025/springboot-ruoyi/23.png)
+![pic_19566da6.png](/images/2025/springboot-ruoyi/23.webp)
 
-![pic_a1491b66.png](/images/2025/springboot-ruoyi/24.png)
+![pic_a1491b66.png](/images/2025/springboot-ruoyi/24.webp)
 
 > 然后将生成的代码分别导入到你的前后端项目中，main 文件夹中生成的后端代码，vue 文件夹中生成的前端代码，下面的三条 sql 脚本是若依框架的动态菜单表，将这三张表导入以后就可以使用若依的菜单管理功能对这三张菜单进行动态管理。
 
-![pic_72575bda.png](/images/2025/springboot-ruoyi/25.png)
+![pic_72575bda.png](/images/2025/springboot-ruoyi/25.webp)
 
-![pic_0f44480a.png](/images/2025/springboot-ruoyi/26.png) ![pic_97c44b56.png](/images/2025/springboot-ruoyi/27.png)
+![pic_0f44480a.png](/images/2025/springboot-ruoyi/26.webp) ![pic_97c44b56.png](/images/2025/springboot-ruoyi/27.webp)
 
 > 然后启动项目进入到区域管理菜单模块，基础界面如下图所示：
 
-![pic_61267570.png](/images/2025/springboot-ruoyi/28.png)
+![pic_61267570.png](/images/2025/springboot-ruoyi/28.webp)
 
 ###### 2.自定义框架
 
@@ -448,7 +448,7 @@ INSERT INTO `tb_node` (`node_name`, `address`, `business_type`, `region_id`, `pa
 <setting name="mapUnderscoreToCamelCase" value="true"/>
 ```
 
-![pic_549657fb.png](/images/2025/springboot-ruoyi/29.png)
+![pic_549657fb.png](/images/2025/springboot-ruoyi/29.webp)
 
 > 然后就是实现点位数量的查询，这里有两种实现思路
 >
@@ -475,9 +475,9 @@ from tb_node group by region_id) n on r.id = n.region_id
 
 > 先在查询中测试这段 sql 代码，运行结果没问题后再放入 mapper.xml 中。
 
-![pic_dd2a6197.png](/images/2025/springboot-ruoyi/30.png)
+![pic_dd2a6197.png](/images/2025/springboot-ruoyi/30.webp)
 
-![pic_c878a3e5.png](/images/2025/springboot-ruoyi/31.png)
+![pic_c878a3e5.png](/images/2025/springboot-ruoyi/31.webp)
 
 > 加 where 的原因是为了动态地生成 SQL 查询的 `WHERE` 子句，它可以帮助避免因条件拼接时的语法错误，自动处理 `WHERE` 关键字和 `AND` 的连接问题。
 
@@ -548,7 +548,7 @@ region/index.vue
 
 > 修改完成后重新启动项目查看界面，没有问题点位数据成功显示！
 
-![pic_884739fb.png](/images/2025/springboot-ruoyi/32.png)
+![pic_884739fb.png](/images/2025/springboot-ruoyi/32.webp)
 
 > 没有显示成功的可以打开 F12 然后点击一下重置按钮看一下数据返回没有，如果有下面的数据就证明后端没有问题，检查前端代码写错没有，如果连数据都没有返回，就证明是后端代码哪里写错了，以我的经验来看一般都是数据库查询的时候出问题。
 
@@ -560,7 +560,7 @@ region/index.vue
 
 > 还是先来分析一下，我们最后想要实现下图的效果，点击查询详情后弹出下面的提示框，提示框中显示了区域名称和包含的点位，显然点位是用一个 List<NodeVo> 对象来存储的，这里又涉及到一个坑了，设备数量在哪里呢？这里为了不再增加复杂度并且考虑到连贯性的关系，就不再对点位表进行改造了，我们修改一下需求，只显示区域包括的点位名称，不显示设备数量。
 
-![pic_9bd96557.png](/images/2025/springboot-ruoyi/34.png)
+![pic_9bd96557.png](/images/2025/springboot-ruoyi/34.webp)
 
 > 要查询点位数据，我们就要用到前端的 node.js 中的 listNode 方法
 
@@ -700,7 +700,7 @@ function getRegionInfo(row) {
 
 > 欧克，做完这一步之后就可以重新启动项目进行测试了。
 
-![pic_92b16645.png](/images/2025/springboot-ruoyi/35.png)
+![pic_92b16645.png](/images/2025/springboot-ruoyi/35.webp)
 
 > 可以看到点击查看详情后成功返回提示框！
 

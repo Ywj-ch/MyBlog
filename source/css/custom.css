@@ -559,3 +559,14 @@ canvas,
 #article-container hr {
   display: none;
 }
+
+
+/* ========== 移动端适配（新增） ========== */
+/* fixed 背景在 iOS 上滚动会掉帧，小屏改为 scroll */
+@media (max-width: 768px) {
+  #web_bg,
+  #page-header.full_page,
+  #page-header.post-bg {
+    background-attachment: scroll !important;
+  }
+}

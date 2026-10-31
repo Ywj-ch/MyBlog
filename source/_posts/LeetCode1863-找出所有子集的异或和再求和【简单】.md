@@ -3,7 +3,7 @@ title: LeetCode1863-找出所有子集的异或和再求和【简单】
 date: 2025-04-05 20:02:12
 tags: [位运算, 数组, 回溯]
 categories: 算法学习
-cover: /img/leetcode.jpg
+cover: /img/leetcode.webp
 swiper_index: 7
 ---
 

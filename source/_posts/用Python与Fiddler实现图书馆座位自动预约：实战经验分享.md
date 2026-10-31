@@ -4,7 +4,7 @@ date: 2025-01-04 13:21:05
 tags: [python, fiddler]
 categories: 个人项目
 description: 本文详细介绍了基于若依框架构建 SpringBoot 管理系统的学习过程，涵盖了框架的基本配置、功能实现及常见问题解决，帮助开发者快速上手和掌握若依框架。
-cover: /img/用Python与Fiddler实现图书馆座位自动预约：实战经验分享.png
+cover: /img/用Python与Fiddler实现图书馆座位自动预约：实战经验分享.webp
 swiper_index: 3
 ---
 
@@ -60,7 +60,7 @@ pip3 install requests
 
 然后在命令行可通过导入 import 库来测试 requests 是否安装成功：
 
-![pic_1f98df1b.png](/images/2024/python-fiddler-library/1.png)
+![pic_1f98df1b.png](/images/2024/python-fiddler-library/1.webp)
 
 这样就算是装好了
 
@@ -72,7 +72,7 @@ pip3 install requests
 
 安装过程就是无脑下一步就行了，装好后点击 `Fiddler.exe` 运行：
 
-![pic_704efb9d.png](/images/2024/python-fiddler-library/2.png)
+![pic_704efb9d.png](/images/2024/python-fiddler-library/2.webp)
 
 > 看上去有点复杂，不过不要慌，我们只需要会用基本的功能就可以了
 
@@ -88,9 +88,9 @@ pip3 install requests
 >
 > 3.  点击 `Actions > Trust Root Certificate`，安装 Fiddler 的证书。
 
-![pic_464cb2c6.png](/images/2024/python-fiddler-library/3.png)
+![pic_464cb2c6.png](/images/2024/python-fiddler-library/3.webp)
 
-![pic_25ea9037.png](/images/2024/python-fiddler-library/4.png)
+![pic_25ea9037.png](/images/2024/python-fiddler-library/4.webp)
 
 > 设置抓包范围
 >
@@ -98,7 +98,7 @@ pip3 install requests
 > 2.  确保 `Allow remote computers to connect` 已勾选。
 > 3.  记下 Fiddler 的监听端口（默认是 8888）。
 
-![pic_dfdc7fd3.png](/images/2024/python-fiddler-library/5.png)
+![pic_dfdc7fd3.png](/images/2024/python-fiddler-library/5.webp)
 
 > 配置系统代理
 >
@@ -136,15 +136,15 @@ pip3 install requests
 >
 > 点击左侧的对应网络请求
 
-![pic_c60379ff.png](/images/2024/python-fiddler-library/7.png)
+![pic_c60379ff.png](/images/2024/python-fiddler-library/7.webp)
 
 > 然后点击 Inspectors 查看数据包，再点击 Row 将整个请求显示为纯文本：
 
-![pic_b1b01776.png](/images/2024/python-fiddler-library/8.png)
+![pic_b1b01776.png](/images/2024/python-fiddler-library/8.webp)
 
 > 然后查看具体响应内容：
 
-![pic_cccc60d1.png](/images/2024/python-fiddler-library/9.png)
+![pic_cccc60d1.png](/images/2024/python-fiddler-library/9.webp)
 
 > 以下内容需要重点关注：
 >
@@ -219,23 +219,23 @@ logging.basicConfig(
 
 > 如果响应数据没问题，那就成功了！下一步就是设置一个定时任务让这个程序在每天早上 7 点准时执行。
 
-![pic_57297dcf.png](/images/2024/python-fiddler-library/10.png)
+![pic_57297dcf.png](/images/2024/python-fiddler-library/10.webp)
 
 > 打开任务计划程序，创建定时任务
 
-![pic_685cedde.png](/images/2024/python-fiddler-library/11.png)
+![pic_685cedde.png](/images/2024/python-fiddler-library/11.webp)
 
-![pic_8824802d.png](/images/2024/python-fiddler-library/12.png)
+![pic_8824802d.png](/images/2024/python-fiddler-library/12.webp)
 
-![pic_e8353aa9.png](/images/2024/python-fiddler-library/13.png)
+![pic_e8353aa9.png](/images/2024/python-fiddler-library/13.webp)
 
-![pic_cf127d9c.png](/images/2024/python-fiddler-library/14.png)
+![pic_cf127d9c.png](/images/2024/python-fiddler-library/14.webp)
 
-![pic_054c03d2.png](/images/2024/python-fiddler-library/15.png)
+![pic_054c03d2.png](/images/2024/python-fiddler-library/15.webp)
 
 > 创建好后直接执行测试一下，然后取日志里看是否正常，如果一切正常，那就大功告成了！
 
-![pic_2ae276db.png](/images/2024/python-fiddler-library/16.png)
+![pic_2ae276db.png](/images/2024/python-fiddler-library/16.webp)
 
 > 最后再次声明一下，如果没有预约成功，请你在调试的时候一定要检查清楚代码的逻辑后再运行！不要短时间内多次访问服务器！否则有可能被检测到然后封禁！
 

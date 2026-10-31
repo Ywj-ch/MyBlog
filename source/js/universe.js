@@ -5,6 +5,19 @@
  */
 
 function dark() {
+  // 性能守卫：小屏或用户开启「减弱动态效果」时不启动星空动画
+  if (typeof window.matchMedia === "function") {
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const small = window.matchMedia("(max-width: 768px)").matches;
+    if (reduce || small) {
+      const canvas = document.getElementById("universe");
+      if (canvas) {
+        canvas.width = 0;
+        canvas.height = 0;
+      }
+      return;
+    }
+  }
   window.requestAnimationFrame =
     window.requestAnimationFrame ||
     window.mozRequestAnimationFrame ||
@@ -24,7 +37,7 @@ function dark() {
   function f() {
     (n = window.innerWidth),
       (e = window.innerHeight),
-      (i = 0.216 * n),
+      (i = Math.min(0.216 * n, 220)),
       s.setAttribute("width", n),
       s.setAttribute("height", e);
   }

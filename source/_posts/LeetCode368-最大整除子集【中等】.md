@@ -3,7 +3,7 @@ title: LeetCode368.最大整除子集【中等】
 date: 2025-04-06 23:46:32
 tags: [数组, 动态规划]
 categories: 算法学习
-cover: /img/leetcode.jpg
+cover: /img/leetcode.webp
 swiper_index: 8
 ---
 

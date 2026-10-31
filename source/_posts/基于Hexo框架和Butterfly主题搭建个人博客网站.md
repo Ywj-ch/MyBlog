@@ -4,7 +4,7 @@ date: 2025-02-11 21:37:26
 tags: [Hexo]
 categories: 个人博客
 description: 在这篇博客中，我将带你一起走过基于 Hexo 框架搭建个人博客的全过程，同时介绍如何使用 Butterfly 主题来美化博客，使其更加符合个人风格。
-cover: /img/个人博客搭建教程.png
+cover: /img/个人博客搭建教程.webp
 swiper_index: 5
 ---
 
@@ -16,7 +16,7 @@ swiper_index: 5
 
 > 下面展示一下我的个人博客网站：
 
-![pic_c8c3215b.png](/images/2024/hexo-blog-setup/1.png)
+![pic_c8c3215b.png](/images/2024/hexo-blog-setup/1.webp)
 
 ### 二、Hexo 框架简介
 
@@ -26,13 +26,13 @@ swiper_index: 5
 >
 > [Hexo][]
 
-![pic_0b118d77.png](/images/2024/hexo-blog-setup/2.png)
+![pic_0b118d77.png](/images/2024/hexo-blog-setup/2.webp)
 
 #### 2.2、安装
 
 > 在安装 Hexo 之前需要先安装好 Git 和 Node.js:
 
-![pic_5a252ec9.png](/images/2024/hexo-blog-setup/3.png)
+![pic_5a252ec9.png](/images/2024/hexo-blog-setup/3.webp)
 
 > Git 和 Node.js 的安装过程这里就不过多赘述了，下面进行 hexo 的安装：
 
@@ -115,7 +115,7 @@ hexo s
 hexo cl; hexo s
 ```
 
-![pic_7e7b4c21.png](/images/2024/hexo-blog-setup/4.png)
+![pic_7e7b4c21.png](/images/2024/hexo-blog-setup/4.webp)
 
 #### 2.4、如何写文章？
 
@@ -182,7 +182,7 @@ hexo new "文章标题" --template post
 
 > 创建一个 GitHub 仓库：首先，登录 GitHub，创建一个新的仓库。如果是个人网站，仓库名必须为 `your_username.github.io`（`your_username` 替换为你的 GitHub 用户名）。
 
-![pic_d9bce224.png](/images/2024/hexo-blog-setup/5.png)
+![pic_d9bce224.png](/images/2024/hexo-blog-setup/5.webp)
 
 > 然后在你的 hexo 中运行如下命令：
 
@@ -214,7 +214,7 @@ hexo clean && hexo g && hexo d
 
 > 打开 Hexo 官网，可以看到这里有许多好看的主题，大家可以根据自己的喜好选择。
 
-![pic_4545e07c.png](/images/2024/hexo-blog-setup/6.png)
+![pic_4545e07c.png](/images/2024/hexo-blog-setup/6.webp)
 
 > 下面我以 Butterfly 主题来演示：
 
@@ -229,14 +229,14 @@ npm install hexo-renderer-pug hexo-renderer-stylus --save
 
 > 修改配置文件 `_config.yml` 中的 `theme` 项为 butterfly：
 
-![pic_c79b540c.png](/images/2024/hexo-blog-setup/7.png)
+![pic_c79b540c.png](/images/2024/hexo-blog-setup/7.webp)
 
 > 建议:
 >
 > - 为了減少升级主题带来的不便，我们可以把主题文件夹中的 `_config.yml` 重命名为 `_config.butterfly.yml`，复制到 Hexo 根目录下与`_config.yml`同级。
 > - Hexo 会自动合并主题中的`_config.yml`和 `_config.butterfly.yml` ，如果存在同名配置，会使用`_config.butterfly.yml`的配置，其优先度较高。所以像和博客网址相关联的固定资料可以设置在\_config.yml 中，比如博客的标题、作者信息和邮箱等等资料，而和主题样式相关的配置放在 `_config.butterfly.yml` 中，那么在将来你想换一个主题是很方便的。
 
-![pic_5292e713.png](/images/2024/hexo-blog-setup/8.png)
+![pic_5292e713.png](/images/2024/hexo-blog-setup/8.webp)
 
 #### 4.2、安装插件
 
@@ -248,7 +248,7 @@ npm install hexo-generator-search --save
 
 > 效果是给你的网站增加一个搜索栏：
 
-![pic_18d2acad.png](/images/2024/hexo-blog-setup/9.png)
+![pic_18d2acad.png](/images/2024/hexo-blog-setup/9.webp)
 
 > 更改配置文件 `_config.butterfly.yml：`
 
@@ -273,7 +273,7 @@ npm install hexo-lazyload-image --save
 
 > 效果是当图片资源加载时用设置的动态加载图片覆盖图片异常显示：
 
-![pic_33ac019c.png](/images/2024/hexo-blog-setup/10.png)
+![pic_33ac019c.png](/images/2024/hexo-blog-setup/10.webp)
 
 > 在 `_config.yml` 中添加以下配置（注意是系统设置文件不是主题设置文件）：
 
@@ -283,7 +283,7 @@ lazyload:
   loadingImg: /img/loading.gif
 ```
 
-![pic_3755c14a.png](/images/2024/hexo-blog-setup/11.png)
+![pic_3755c14a.png](/images/2024/hexo-blog-setup/11.webp)
 
 ##### 3、字数统计插件
 
@@ -343,7 +343,7 @@ type: "tags"
 
 > 其他的标签也是一样，最终效果如图：
 
-![pic_10471d95.png](/images/2024/hexo-blog-setup/12.png)
+![pic_10471d95.png](/images/2024/hexo-blog-setup/12.webp)
 
 ##### 2. 修改个人信息
 
@@ -404,7 +404,7 @@ card_author:
 
 > 提一下 fa-github 是框架自带的图标库，`Butterfly`支持[font-awesome v6][]图标，当然你也可以根据自身需求进行定制。
 
-![pic_13e307a2.png](/images/2024/hexo-blog-setup/13.png)
+![pic_13e307a2.png](/images/2024/hexo-blog-setup/13.webp)
 
 ##### 4. 图片设置
 
@@ -415,7 +415,7 @@ card_author:
 网站图标
 
 ```java
-favicon: /img/favicon.png
+favicon: /img/favicon.webp
 ```
 
 头像

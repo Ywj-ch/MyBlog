@@ -3,7 +3,7 @@ title: 二分答案模板 —— 求最大值 vs 求最小值
 date: 2026-05-12 12:02:23
 tags: [二分法]
 categories: 算法学习
-cover: /img/leetcode.jpg
+cover: /img/leetcode.webp
 ---
 
 # 二分答案模板 —— 求最大值 vs 求最小值

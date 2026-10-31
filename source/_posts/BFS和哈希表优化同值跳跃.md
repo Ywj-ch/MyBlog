@@ -3,7 +3,7 @@ title: BFS和哈希表优化同值跳跃
 date: 2026-05-18 10:00:00
 tags: [BFS, 哈希表, 图优化]
 categories: 算法学习
-cover: /img/leetcode.jpg
+cover: /img/leetcode.webp
 ---
 
 # BFS + 哈希表优化同值跳跃
